@@ -34,6 +34,7 @@ h2:hover {
     position: absolute;
     width: 300px;
     height: auto;
+    opacity: 0;
     visibility: hidden;
     background-color: black;
     color: #fff;
@@ -41,6 +42,7 @@ h2:hover {
     padding: 0 50px;
     border-radius: 6px;
     z-index: 1;
+    transition: opacity .3s ease;
 }
 
 .tooltip::after {
@@ -56,23 +58,15 @@ h2:hover {
 }
 
 h2:hover .tooltip {
+    opacity: 1;
     visibility: visible;
     bottom: 75px;
-    left: -240px;
+    left: 50%;
     width: 600px;
+    transform: translateX(-50%);
 }
 
 span {
     color: #888;
     font-size: 32px;
-}
-
-@keyframes silde {
-    0% {
-        display: none;
-    }
-    100% {
-        color: red;
-        display: block;
-    }
 }
